@@ -12,5 +12,16 @@
     "navigationFallback": {
       "rewrite": "/index.html",
       "exclude": ["*.{css,scss,js,png,gif,ico,jpg,svg}"]
+    },
+    "auth": {
+      "identityProviders": {
+        "azureActiveDirectory": {
+          "registration": {
+            "openIdIssuer": "https://login.microsoftonline.com/zealous-coast",
+            "clientIdSettingName": "1bdaba51-7215-467c-89ae-6a338ca2b0b3",
+            "clientSecretSettingName": "_.l7_u~EPDx7Di1nS2ChzeRQ96BCqd-4d1"
+          }
+        }
+      }
     }
   }
