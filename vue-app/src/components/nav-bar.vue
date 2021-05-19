@@ -7,7 +7,7 @@ export default {
         type: Object,
         default() {},
       },
-      providers: ['azureActiveDirectory'],
+      providers: ['aad'],
       redirect: window.location.pathname,
     };
   },
@@ -19,7 +19,6 @@ export default {
         const { clientPrincipal } = payload;
         return clientPrincipal;
       } catch (error) {
-        // eslint-disable-next-line no-console
         console.error('No profile could be found');
         return undefined;
       }
@@ -44,9 +43,11 @@ export default {
       <div class="menu-list auth">
         <template v-if="!userInfo">
           <template v-for="provider in providers">
-            <a :key="provider" :href="`/.auth/login/${provider}`">{{
-              provider
-            }}</a>
+            <a
+              :key="provider"
+              :href="`/.auth/login/${provider}?post_login_redirect_uri=${redirect}`"
+              >{{ provider }}</a
+            >
           </template>
         </template>
         <a
