@@ -7,7 +7,7 @@ export default {
         type: Object,
         default() {},
       },
-      providers: ['twitter', 'github', 'aad'],
+      providers: ['azureActiveDirectory'],
       redirect: window.location.pathname,
     };
   },
