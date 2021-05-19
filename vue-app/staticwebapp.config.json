@@ -1,7 +1,23 @@
 {
   "auth": {
       "identityProviders": {
-          "customOpenIdConnectProviders": {}
+          "customOpenIdConnectProviders": {
+              "okta": {
+                  "registration": {
+                      "clientIdSettingName": "0oas1427pQpankCZI5d6",
+                      "clientCredential": {
+                          "clientSecretSettingName": "6iHi-XUEK2CsNVs8EJqDNBroTxt6NpSxGhlrshMf"
+                      },
+                      "openIdConnectConfiguration": {
+                          "wellKnownOpenIdConfiguration": "https://dev-89008288.okta.com/.well-known/openid-configuration"
+                      }
+                  },
+                  "login": {
+                    "nameClaimType": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
+                    "scopes": ["openid", "profile"]
+                }
+              }
+          }
       }
   }
 }
