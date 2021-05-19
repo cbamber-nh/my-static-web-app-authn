@@ -7,7 +7,7 @@ export default {
         type: Object,
         default() {},
       },
-      providers: ['aad'],
+      providers: ['twitter', 'github', 'aad', 'okta'],
       redirect: window.location.pathname,
     };
   },
@@ -19,7 +19,6 @@ export default {
         const { clientPrincipal } = payload;
         return clientPrincipal;
       } catch (error) {
-        // eslint-disable-next-line no-console
         console.error('No profile could be found');
         return undefined;
       }

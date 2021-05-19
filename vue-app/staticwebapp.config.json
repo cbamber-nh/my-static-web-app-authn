@@ -1,27 +1,7 @@
 {
-    "routes": [
-      {
-        "route": "/api/products/*",
-        "allowedRoles": ["authenticated"]
-      },
-      {
-      "route": "/about",
-      "allowedRoles": ["authenticated"]
-    }
-    ],
-    "navigationFallback": {
-      "rewrite": "/index.html",
-      "exclude": ["*.{css,scss,js,png,gif,ico,jpg,svg}"]
-    },
-    "auth": {
+  "auth": {
       "identityProviders": {
-        "azureActiveDirectory": {
-          "registration": {
-            "openIdIssuer": "https://login.microsoftonline.com/4ed143e2-2df9-4d7d-b03c-9f9210fe934a",
-            "clientIdSettingName": "1f263a4c-1e00-4eb8-8483-cf1e1e2d39db",
-            "clientSecretSettingName": "Rq.k.i0MYRQFX3mZ~wB_4Xx30~s17x8MAm"
-          }
-        }
+          "customOpenIdConnectProviders": {}
       }
-    }
   }
+}
